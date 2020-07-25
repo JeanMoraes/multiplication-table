@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: Roboto;
+
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+    max-width: 768px;
+    padding: 35px 90px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box-input{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.box-input h1{
+    width: 100%;
+    color: #333;
+    font-size: 35px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-input input{
+    width: 150px;
+    height: 40px;
+    margin: 0 0 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.box-input button{
+    border: 0;
+    background-color: #222;
+    color: #FFF;
+    padding: 5px 10px;
+}
+
+.box-input .erro{
+    color: #F00;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.resultado{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, 1fr);
+    padding-top: 15px;
+}
+
+.resultado p{
+    margin: 0;
+    padding: 15px 50px;
+    border: 1px solid #333;
+    text-align: center;
 }
